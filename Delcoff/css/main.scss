@@ -1,0 +1,578 @@
+@import 'global';
+@import 'color';
+
+header{
+  width: 100%;
+  height: 100vh;
+  padding: 1em 0;
+  background: linear-gradient(rgba(13,6,0,0.73), rgba(13,6,0,0.73)), url('../imgs/1-min.jpg') no-repeat;
+  background-size: cover;
+  background-position: 70%;
+
+  .main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+  }
+
+  .main-nav.nav-scroll{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em 2em;
+    background-color: $bg-dark;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 2px 11px 2px rgba(0,0,0,0.6);
+    z-index: 900;
+  }
+
+  .logo a{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .menu-open{
+    color: white;
+    font-size: 1.9rem;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navbar{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $bg-dark;
+    text-align: center;
+    padding-top: 1.5em;
+    transition: 0.5s ease-in-out;
+    z-index: 999;
+
+    .menu-close{
+      color: white;
+      font-size: 2.5rem;
+      text-align: right;
+      margin-right: 1em;
+      cursor: pointer;
+    }
+
+    ul{
+      margin-top: 2em;
+    }
+
+    li{
+      margin: 1.5em 0;
+    }
+
+    a{
+      color: white;
+    }
+  }
+
+  .navbar.toggle{
+    right: 0;
+  }
+
+  .hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+    max-width: 560px;
+
+    h1{
+      color: white;
+      font-size: 2.6rem;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    p{
+      color: white;
+      margin: 2em 0 2.2em 0;
+      line-height: 2;
+    }
+
+    .hero-cta{
+      a{
+        background-color: $bg-dark;
+        padding: 0.7em 2em;
+        color: white;
+        letter-spacing: 0.2rem;
+      }
+    }
+  }
+}
+
+.scroll-top{
+  display: none;
+  position: fixed;
+  right: 0.5em;
+  bottom: 0;
+  color: $bg-dark;
+  font-size: 2.6rem;
+  opacity: 0.7;
+  z-index: 890;
+  cursor: pointer;
+}
+
+.about{
+  width: 100%;
+  height: auto;
+  padding: 2em 0 2.5em 0;
+  margin: 3em 0;
+
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .about-text{
+    h2{
+      text-align: center;
+      color: $bg-dark;
+      font-size: 1.8rem;
+      margin-bottom: 0.7em;
+    }
+
+    p{
+      // text-align: center;
+      line-height: 2;
+    }
+  }
+
+  .about-img{
+    width: 100%;
+    margin-bottom: 2em;
+
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.products{
+  width: 100%;
+  height: auto;
+  padding: 2em 0;
+  // margin: 3em 0;
+
+  h2{
+    text-align: center;
+    color: $bg-dark;
+    font-size: 1.8rem;
+    margin-bottom: 1.5em;
+  }
+
+  .prod-1, .prod-2, .prod-3{
+    width: 90%;
+    margin: 0 auto 4em auto;
+    padding-bottom: 1em;
+    box-shadow: 0px 1px 11px 2px rgba(0,0,0,0.15);
+
+    p{
+      text-align: center;
+      font-weight: 600;
+      color: $bg-dark;
+      margin-top: 0.5em;
+      font-size: 1.2rem;
+    }
+  }
+
+  img{
+    width: 100%;
+  }
+}
+
+.process{
+  width: 100%;
+  height: auto;
+  padding: 2em 0;
+
+  .process-content{
+    width: 100%;
+    position: relative;
+    padding-bottom: 10em;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  h2{
+    text-align: center;
+    color: $bg-dark;
+    font-size: 1.8rem;
+    margin-bottom: 1.5em;
+  }
+
+  .process-text{
+    position: absolute;
+    right: 1em;
+    bottom: 2em;
+    background-color: $bg-dark;
+    color: white;
+    width: 80%;
+    height: auto;
+    padding: 1em 1em 1em 1.5em;
+    max-height: 240px;
+    z-index: 100;
+
+    p{
+      line-height: 2;
+      font-size: 0.9rem;
+    }
+  }
+
+}
+
+.contact{
+  width: 100%;
+  height: auto;
+  padding: 2em 0;
+
+  h2{
+    text-align: center;
+    color: $bg-dark;
+    font-size: 1.8rem;
+    margin-bottom: 1.5em;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  label{
+    color: $bg-dark;
+    margin-bottom: 0.4em;
+    font-weight: 600;
+  }
+
+  input{
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+  }
+
+  textarea{
+    padding: 0.5em 1em;
+  }
+
+  button{
+    border: none;
+    margin-top: 1.5em;
+    padding: 0.8em;
+    background-color: $submit-btn;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+  }
+}
+
+footer{
+  width: 100%;
+  height: auto;
+  padding: 2.5em 0;
+  background-color: $bg-dark;
+  margin-top: 5em;
+  text-align: center;
+
+  .foot-logo a{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  p{
+    color: rgb(230, 230, 230);
+    font-size: 0.9rem;
+    margin: 1em 0;
+  }
+
+  .socials a{
+    font-size: 1.8rem;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 562px){
+  .process{
+    .process-text{
+      width: 75%;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px){
+  .process{
+    .process-text{
+      width: 70%;
+      bottom: 3em;
+    }
+  }
+}
+
+@media only screen and (min-width: 650px){
+  .process{
+    .process-text{
+      width: 65%;
+      bottom: 4em;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .container{
+    width: 70%;
+    padding: 0 1em;
+  }
+
+  header{
+
+    .main-nav.nav-scroll{
+      padding: 1.2em 5em;
+    }
+  
+    .menu-open{
+      display: none;
+    }
+  
+    .navbar{
+      position: static;
+      height: auto;
+      background-color: transparent;
+      padding-top: 0;
+      width: auto;
+      transition: none;
+  
+      .menu-close{
+        display: none;
+      }
+  
+      ul{
+        display: flex;
+        margin-top: 0;
+      }
+  
+      li{
+      margin: 0 0.5em;
+      }
+
+      a:hover{
+        font-weight: 600;
+      }
+    }
+  
+    .hero-content{
+      margin-top: 12vh;
+  
+      h1{
+        font-size: 2.8rem;
+      }
+  
+      p{
+        margin-bottom: 3em;
+        text-align: center;
+      }
+  
+      .hero-cta{
+        a{
+          padding: 0.85em 2.2em;
+          font-size: 1.1rem;
+        }
+
+        a:hover{
+          background-color: $btn-hover;
+        }
+      }
+    }
+  }
+
+  .scroll-top{
+    right: 1em;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  .contact{
+    input{
+      padding: 0.8em 1em;
+    }
+
+    textarea{
+      padding: 0.8em 1em;
+    }
+
+    button{
+      padding: 1em;
+
+      &:hover{
+        background-color: $submit-btn-hover;
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: 890px){
+  .process{
+    .process-text{
+      width: 55%;
+      bottom: 5em;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .container{
+    width: 85%;
+  }
+
+  header{
+
+    .navbar{
+      a{
+        font-size: 0.95rem;
+      }
+    }
+  
+    .hero-content{
+      align-items: flex-start;
+      width: 60%;
+  
+      h1{
+        text-align: left;
+      }
+  
+      p{
+        text-align: left;
+      }
+  
+      .hero-cta{
+        a{
+          padding: 0.85em 2.2em;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  .about{
+    margin: 5em 0;
+  
+    .container{
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    .about-text{
+      width: 45%;
+
+      h2{
+        text-align: left;
+      }
+    }
+  
+    .about-img{
+      width: 40%;
+      margin-bottom: 0;
+    }
+  }
+
+  .products{
+    .container{
+      display: flex;
+    }
+  
+    .prod-1, .prod-2, .prod-3{
+      margin: 0 0.6em 4em 0.6em;
+    }
+  }
+
+  .process{
+    margin-top: 5em;
+  
+    .process-content{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+  
+    img{
+      width: 50%;
+      margin-left: -4%;
+    }
+  
+    h2{
+      text-align: left;
+      width: 190px;
+      margin-left: 4%;
+      line-height: 1.4;
+    }
+  
+    .process-text{
+      width: 40%;
+      right: 5em;
+      bottom: 12em;
+    }
+  
+  }
+
+  footer{
+    padding: 1.5em 0;
+
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+}
+
+@media only screen and (min-width: 1070px){
+  .process{
+    .process-text{
+      width: 35%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1150px){
+  .process{
+    .process-text{
+      width: 30%;
+      right: 8em;
+    }
+  
+  }
+}
+
+@media only screen and (min-width: 1260px){
+  .process{
+    .process-text{
+      width: 30%;
+      padding: 2em 1em 2em 1.5em;
+      right: 10em;
+      bottom: 13em;
+    }
+  }
+}
